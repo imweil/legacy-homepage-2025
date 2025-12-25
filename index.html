@@ -1,0 +1,592 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QDHL4LT2J6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QDHL4LT2J6');
+    </script>
+
+    <!-- Title -->
+    <title>imweil.github.io</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1000">
+
+    <!-- Isotope JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://kit.fontawesome.com/1643bac768.js" crossorigin="anonymous"></script>
+    <!-- Custom Style -->
+    <link rel="stylesheet" target="_blank" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" target="_blank" href="https://fonts.googleapis.com">
+    <link rel="preconnect" target="_blank" href="https://fonts.gstatic.com" crossorigin>
+    <link target="_blank"
+        href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link target="_blank"
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link target="_blank" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" target="_blank"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .pdfContainer {
+            width: 1000px;
+            height: 600px;
+            border: none;
+        }
+
+        .errorMessage {
+            display: none;
+            color: red;
+            font-size: 20px;
+        }
+
+        .wechatModal.visible {
+            display: block;
+            /* Show the modal when visible class is added */
+        }
+    </style>
+
+    <style id="initialHideStyle">
+        body {
+            visibility: hidden;
+        }
+    </style>
+
+    <style>
+        @keyframes accept-animation {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -150%) scale(1.5);
+            }
+        }
+    </style>
+
+</head>
+
+<body id="body">
+
+    <div id="main">
+        <div id="intro">
+            <div id="intro-image">
+                <img src="images/profile_ori.jpg" alt="real" class="real">
+                <img src="images/profile.jpg" alt="anime" class="anime">
+            </div>
+            <div id="intro-text">
+                <h1> <b> Wei </b> <b> Chen </b> </h1>
+                <p style="text-align: justify;">
+                    &emsp;
+                    Hi there!
+                    I received both my Bachelor's degree in Mechanical Engineering (with a minor in Business
+                    Administration)
+                    and my Master's degree in Software Engineering from <a target="_blank"
+                        href="https://www.zzu.edu.cn/">Zhengzhou University</a>,
+                    where I had the privilege of being supervised by <a target="_blank"
+                        href="https://zzudb.github.io/">Prof. Yafei Li</a>.
+                    <br>
+                    &emsp;
+                    During my undergraduate years,
+                    I developed a strong interest in Computer Science,
+                    which led me to change my academic path and pursue further studies in this field.
+                    During my master’s studies, I focused on Crowdsourcing and Data Management, 
+                    independently developing ideas, coding, and publishing three papers, 
+                    as well as collaborating on two more.
+                    <br>
+                    &emsp;
+                    My research interests include 🧠 reinforcement learning and its applications in 🤖 embodied intelligence, 👁️ computer vision, and 🗣️ large language models (LLMs). 
+                    I am currently seeking PhD and RA opportunities related to these fields.
+                    <br><br>
+
+                    <a target="_blank" href="https://github.com/imweil" style="color: #000000;"><i
+                            style="font-size:20px" class="fa">&#xf09b;</i> Github</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a target="_blank" href="https://scholar.google.com/citations?user=Yeh90kEAAAAJ&hl=zh-CN"
+                        style="color: #4185F4; font-size:17px"><i class="fa-brands fa-google-scholar"></i> Google
+                        Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="mailto:ischenwei@outlook.com" style="color: #150c21;"><i class="fa-solid fa-envelope" style="color: #9f9f9f;"></i> ischenwei[at]outlook[dot]com</a>
+
+                    <br>
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div id="filters" class="button-group">
+            <button class="button"  id="researchButton" data-filter=".publication"><span
+                    class="english-text">Publications</span></button>
+            <!-- <button class="button"  data-filter=".new"><span
+                    class="english-text">News</span></button>                    -->
+            <button class="button" data-filter=".project"><span class="english-text">Projects</span></button>
+            <button class="button" data-filter=".cv"><span class="english-text">CV</span></button>
+        </div>
+
+        <div class="grid">
+
+            <!-- News -->
+            <div class="list-item new description" data-category="new" id="news-container">
+                <p> <b>[2025-xx]</b> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
+                <br>
+                <p> <b>[2025-03]</b> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                <br>
+
+            </div>
+
+            <!-- Publications -->
+            <div class="list-item publication" data-category="publication">
+                <div class="thumbnail"><img src="images/AAAI2025.png" alt="" /></div>
+                <div class="project-description">
+                    <h3><a target="_blank" href="https://ojs.aaai.org/index.php/AAAI/article/view/33566">Gradient-Guided
+                            Credit Assignment and Joint Optimization for Dependency-Aware Spatial Crowdsourcing</a></h3>
+                    <p>
+                        Yafei Li*, <u>Wei Chen</u>*, Jinxing Yan, Huiling Li, Lei Gao, Mingliang Xu†
+                        <font color="49bf9"><br><i>Association for the Advancement of Artificial Intelligence (AAAI)
+                                2025</i><br> </font>
+                        <font color="orange"><i>&#9733; Oral Presentation (Score: 7 7 8) &#9733;</i></font>
+                        <br>
+                        <font color="769fcd"> <i class="fa-solid fa-magnifying-glass"></i> TL;DR:
+                            We propose RMO, a two-stage framework for dependency-aware spatial crowdsourcing that uses
+                            multi-agent RL for subtask recommendation and utility-based matching, employing
+                            meta-gradients and gradient synchronization to address credit assignment and joint
+                            optimization challenges.
+                            <br>
+                            <a href="https://ojs.aaai.org/index.php/AAAI/article/view/33566" target="_blank" style="text-decoration:underline; color:blue;">[View Paper]</a>
+                            &nbsp;
+                            <a href="files/poster_AAAI2025.pdf" target="_blank" style="text-decoration:underline; color:blue;">[View Poster]</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="list-item publication" data-category="publication">
+                <div class="thumbnail"><img src="images/IJCAI2025.png" alt="" /></div>
+                <div class="project-description">
+                    <h3><a target="_blank" href="https://www.ijcai.org/proceedings/2025/459">Credit Assignment and Fine-Tuning Enhanced Reinforcement Learning for
+                            Collaborative Spatial Crowdsourcing</a></h3>
+                    <p>
+                        <u>Wei Chen</u>, Yafei Li†, Baolong Mei, Guanglei Zhu, Jiaqi Wu, Mingliang Xu
+                        <font color="49bf9"><br><i>International Joint Conference on Artificial Intelligence (IJCAI)
+                                2025</i><br> </font>
+
+                        <font color="769fcd"> <i class="fa-solid fa-magnifying-glass"></i> TL;DR:
+                            We propose CAFE, a multi-agent RL framework for spatial crowdsourcing that addresses delayed
+                            rewards and non-stationary distributions through credit assignment mechanisms and adaptive
+                            fine-tuning, achieving superior task completion and equitable reward distribution.
+                            <br>
+                            <a href="https://www.ijcai.org/proceedings/2025/459" target="_blank" style="text-decoration:underline; color:blue;">[View Paper]</a>
+                            &nbsp;
+                            <a href="files/poster_IJCAI2025.pdf" target="_blank" style="text-decoration:underline; color:blue;">[View Poster]</a>  
+                            &nbsp;
+                    </p>
+                </div>
+            </div>
+
+            <div class="list-item publication" data-category="publication">
+                <div class="thumbnail"><img src="images/ICDE2025.png" alt="" /></div>
+                <div class="project-description">
+                    <h3><a target="_blank" href="https://ieeexplore.ieee.org/document/11113007">Effective Task Assignment in Mobility Prediction-Aware Spatial
+                            Crowdsourcing</a></h3>
+                    <p>
+                        Huiling Li, Yafei Li†, <u>Wei Chen</u>, Shuo He, Mingliang Xu, Jianliang Xu
+                        <font color="49bf9"><br><i>IEEE International Conference on Data Engineering (ICDE) 2025</i><br>
+                        </font>
+
+                        <font color="769fcd"> <i class="fa-solid fa-magnifying-glass"></i> TL;DR:
+                            We address Task Assignment in Mobility Prediction-aware Spatial Crowdsourcing (TAMP) through
+                            a task-adaptive meta-learning algorithm that clusters workers and trains mobility prediction
+                            models, coupled with a task assignment algorithm that prioritizes high-confidence
+                            completions, achieving improved assignment quality.
+                            <br>
+                            <a href="https://ieeexplore.ieee.org/document/11113007" target="_blank" style="text-decoration:underline; color:blue;">[View Paper]</a>
+                            &nbsp;
+                            <a href="files/poster_icde2025.pdf" target="_blank" style="text-decoration:underline; color:blue;">[View Poster]</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="list-item publication" data-category="publication">
+                <div class="thumbnail"><img src="images/VLDB2024.png" alt="" /></div>
+                <div class="project-description">
+                    <h3><a target="_blank" href="https://dl.acm.org/doi/abs/10.14778/3685800.3685882">Catcher: A Cache
+                            Analysis System for Top-k Pub/Sub Service</a></h3>
+                    <p>
+                        Baolong Mei, Yafei Li†, <u>Wei Chen</u>, Linshen Luan, Guanglei Zhu, Yuanyuan Jin, Jianliang Xu
+                        <font color="49bf9"><br><i>Proceedings of the Very Large Data Base Endowment (PVLDB) 2024</i><br>
+                        </font>
+                        <font color="769fcd"> <i class="fa-solid fa-magnifying-glass"></i> TL;DR:
+                            We introduce Catcher, a multi-functional cache analysis system for Top-k Publish/Subscribe
+                            services that enable intuitive analysis of cache performance, bottleneck identification,
+                            and real-time evaluation through user-friendly interfaces.
+                        <br>
+                        <a href="https://dl.acm.org/doi/abs/10.14778/3685800.3685882" target="_blank" style="text-decoration:underline; color:blue;">[View Paper]</a>
+                        &nbsp;
+                        <a href="files/poster_vldb2024.pdf" target="_blank" style="text-decoration:underline; color:blue;">[View Poster]</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="list-item publication" data-category="publication">
+                <div class="thumbnail"><img src="images/HKXB.png" alt="" /></div>
+                <div class="project-description">
+                    <h3><a target="_blank" href="https://hkxb.buaa.edu.cn/CN/10.7527/S1000-6893.2024.31274">Collaborative decision making methods for support optimization of diverse carrier-borne aircraft</a></h3>
+                    <p>
+                        <u>Wei Chen</u>, Lulu Li, Dong Chen, Yafei Li†, Ke Wang, Yuanuyuan Jin, Mingliang Xu
+                        <font color="49bf9"><br><i>Acta Aeronautica et Astronautica Sinica (in Chinese)</i><br>
+                        </font>
+                        <font color="769fcd"> <i class="fa-solid fa-magnifying-glass"></i> TL;DR:
+                            We propose DATSDM, a novel Dependency-Aware Task Scheduling Decision Module leveraging graph neural networks and Transformer attention mechanisms
+                        <br>
+                        <a href="https://hkxb.buaa.edu.cn/CN/10.7527/S1000-6893.2024.31274" target="_blank" style="text-decoration:underline; color:blue;">[View Paper]</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- side projects  -->
+            <div class="list-item project description" data-category="project">
+                <h3>
+                    I have experience in mechanical design, circuit design, and programming.
+                </h3>
+            </div>
+
+            <div class="list-item project" data-category="project">
+                <table width="100%" align="center" border="0" cellpadding="0">
+                    <tr>
+                        <td width="60%" align="center" valign="middle">
+                            <div>
+                                <img src="images/gourd_moxibustion_1.jpg" alt="prl" style="height:150px; margin:0 20px;">
+                                <img src="images/gourd_moxibustion_2.png" alt="prl" style="height:150px; margin:0 20px;">
+                                 <br><br> 
+                            </div>
+                            <p>
+                                <font color="49bf9"><i> Medical Device Integrating Traditional Chinese Culture – Intelligent Gourd Moxibustion Therapy Instrument.</i></font><br>
+                                Designed the structure of the intelligent gourd moxibustion device and developed a supporting WeChat mini-program for enhanced user control and interaction.
+                        
+                        </p>
+                        </td>
+                        <td width="40%" align="center" valign="middle">
+                            <img src="images/lower_limb_rehab_robot.png" alt="prl" style="height:150px" valign="middle"><br><br>
+                            <p>
+                                <font color="49bf9"><i> Lower Limb Rehabilitation Robot – First Prize in Mechanical Design Competition.</i></font><br>
+                                Developed a lower limb rehabilitation robot focusing on mechanical design and functional effectiveness.
+                        
+                        </p>
+                        </td>
+                    </tr>
+                </table>
+                <br><br>
+                <table width="100%" align="center" border="0" cellpadding="0">
+                    <tr>
+                        <td width="25%" align="center" valign="middle">
+                            <img src="images/10_servo_gymnastics_robot.png" alt="prl" style="height:150px" valign="middle"><br><br>
+                            <p>
+                                <font color="49bf9"><i> 10-Servo Gymnastics Robot at <br> the Chinese Robotics Competition. </i></font><br>
+                                Designed the structure and developed an accompanying WeChat app for the intelligent gourd moxibustion therapy instrument.
+                        </p>
+                        </td>
+
+                        <td width="25%" align="center" valign="middle">
+                            <img src="images/14_servo_gymnastics_robot.png" alt="prl" style="height:150px" valign="middle"><br><br>
+                            <p>
+                                <font color="49bf9"><i> 14-Servo Gymnastics Robot at <br> the Chinese Robotics Competition. </i></font><br>
+                                Designed and completed the mechanical structure of the robot, along with the development of corresponding gymnastics movements.
+                        </p>
+                        </td>
+
+                        <td width="25%" align="center" valign="middle">
+                            <img src="images/dancing_robot.png" alt="prl" style="height:150px" valign="middle"><br><br>
+                            <p>
+                                <font color="49bf9"><i> Dancing Robot at <br> the Chinese Robotics Competition. </i></font><br>
+                                Designed and completed the mechanical structure of the robot, along with the development of corresponding dance movements.
+                        </p>
+                        </td>
+
+                        <td width="25%" align="center" valign="middle">
+                            <img src="images/racewalking_robot.png" alt="prl" style="height:150px" valign="middle"><br><br>
+                            <p>
+                                <font color="49bf9"><i> Racewalking Robot at <br> the Chinese Robotics Competition. </i></font><br>
+                                Designed and completed the mechanical structure of the robot, along with the development of corresponding racewalking movements.
+                        </p>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+
+            <!-- CV -->
+            <div class="list-item cv description" data-category="cv">
+                <p>Please click <a href="https://drive.google.com/file/d/1YXde2iY2zwtJKPRhEgia_oPetMypxljb/view" target="_blank" style="color:blue; text-decoration:underline;">here</a> to view the full CV (PDF format).</p>
+            </div>
+
+        </div>
+
+
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=200&t=n&d=Cj6mMZOLUwozoqncsT_VsZU9uNZUaqO1k89yMz_dozQ&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
+
+        <br> <br> <br>
+
+    </div>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            var links = document.querySelectorAll('a.noNavigateLink');
+            links.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                });
+            });
+        });
+
+        window.onload = function () {
+            var pdfContainers = document.getElementsByClassName('pdfContainer');
+            var errorMessages = document.getElementsByClassName('errorMessage');
+
+            // Ensure we have the same number of errorMessages as pdfContainers
+            if (pdfContainers.length !== errorMessages.length) {
+                console.error('The number of error messages does not match the number of PDF containers.');
+                return;
+            }
+
+            Array.prototype.forEach.call(pdfContainers, function (pdfContainer, index) {
+                var errorMessage = errorMessages[index];
+
+                pdfContainer.onload = function () {
+                    try {
+                        var doc = pdfContainer.contentDocument || pdfContainer.contentWindow.document;
+                        // Check for empty content or a specific error message
+                        if (doc.body.innerHTML.trim().length === 0) {
+                            throw new Error("Empty content");
+                        }
+                    } catch (error) {
+                        pdfContainer.style.display = 'none';
+                        errorMessage.style.display = 'block';
+                    }
+                };
+
+                pdfContainer.onerror = function () {
+                    pdfContainer.style.display = 'none';
+                    errorMessage.style.display = 'block';
+                };
+            });
+        };
+        // set initial active button
+        document.addEventListener("DOMContentLoaded", function () {
+            var button = document.getElementById("researchButton");
+            button.classList.add("active");
+            button.click();
+        });
+
+        // Isotope grid.
+        var $grid = $('.grid').isotope({
+            itemSelector: '.list-item',
+            layoutMode: 'fitRows',
+            transitionDuration: 0,
+            stagger: 10,
+            initLayout: false,
+            getSortData: {
+                name: '.name',
+                symbol: '.symbol',
+                number: '.number parseInt',
+                category: '[data-category]',
+                weight: function (itemElem) {
+                    var weight = $(itemElem).find('.weight').text();
+                    return parseFloat(weight.replace(/[\(\)]/g, ''));
+                }
+            }
+        });
+
+        // Bind filter button click.
+        $('#filters').on('click', 'button', function () {
+            var filterValue = $(this).attr('data-filter');
+            localStorage.setItem('filterValue', filterValue);
+            $grid.isotope({ filter: filterValue });
+        });
+
+        // Change is-checked class on buttons.
+        $('.button-group').each(function (i, buttonGroup) {
+            var $buttonGroup = $(buttonGroup);
+            $buttonGroup.on('click', 'button', function () {
+                $buttonGroup.find('.is-checked').removeClass('is-checked');
+                $(this).addClass('is-checked');
+            });
+        });
+
+        function update_isotope() {
+            // Retrieve cached button click.
+            var defaultFilterValue = localStorage.getItem('filterValue');
+            if (defaultFilterValue == null) {
+                defaultFilterValue = ".highlight"
+            }
+            $grid.isotope({ filter: defaultFilterValue });
+            var buttons = document.getElementsByClassName("button");
+            for (var currButton of buttons) {
+                if (currButton.getAttribute('data-filter') == defaultFilterValue) {
+                    currButton.classList.add('is-checked');
+                } else {
+                    currButton.classList.remove('is-checked');
+                }
+            }
+        }
+
+        function toggle_bio() {
+            var x = document.getElementById("more-bio");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function toggle_highlights() {
+            var x = document.getElementById("main-highlights");
+            var y = document.getElementById("more-highlights");
+            var b = document.getElementById("toggle_highlights_button")
+            if (y.style.display === "none") {
+                x.style.display = "none";
+                y.style.display = "block";
+                b.innerHTML = "Show less"
+                update_isotope();
+            } else {
+                x.style.display = "block";
+                y.style.display = "none";
+                b.innerHTML = "Show more"
+                update_isotope();
+            }
+        }
+
+        update_isotope();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var section = urlParams.get('section');
+            if (section) {
+                var button = document.querySelector(`button[data-filter='.${section}']`);
+                if (button) {
+                    button.click();
+                }
+            }
+        });
+        function adjustFooterMargin() {
+            var footer = document.getElementById('footer');
+            if (!footer) return;
+            var footerHeight = footer.offsetHeight;
+            var publications = document.querySelector('.publication');
+            var projects = document.querySelector('.project');
+            var cv = document.querySelector('.cv');
+            var maxHeight = Math.max(
+                publications ? publications.offsetHeight : 0,
+                projects ? projects.offsetHeight : 0,
+                cv ? cv.offsetHeight : 0,
+            );
+            var marginBottom = footerHeight + 'px';
+            if (publications) publications.style.marginBottom = marginBottom;
+            if (projects) projects.style.marginBottom = marginBottom;
+            if (cv) cv.style.marginBottom = marginBottom;
+        }
+
+        window.onload = adjustFooterMargin;
+        window.onresize = adjustFooterMargin;
+        document.querySelectorAll('.wechatButton').forEach(function (button) {
+            button.onclick = function (event) {
+                event.preventDefault(); // Prevent default button action
+
+                // Hide all currently visible modals
+                document.querySelectorAll('.wechatModal.visible').forEach(function (modal) {
+                    modal.classList.remove('visible');
+                });
+
+                // Find the .wechatModal within the clicked button
+                var modal = button.querySelector('.wechatModal');
+                if (modal) {
+                    modal.classList.add('visible');
+                }
+            };
+        });
+
+        document.querySelectorAll('.closeModal').forEach(function (button) {
+            button.onclick = function (event) {
+                // Stop the click event from bubbling up
+                event.stopPropagation();
+
+                // Find the closest .wechatModal from the clicked .closeModal
+                var modal = button.closest('.modal-content').parentElement;
+                if (modal && modal.classList.contains('wechatModal')) {
+                    modal.classList.remove('visible');
+                }
+            };
+        });
+
+        // Optional: Close modal when clicking outside of modal content
+        document.querySelectorAll('.wechatModal').forEach(function (modal) {
+            modal.onclick = function (event) {
+                // Close the modal if the background is clicked, not the content
+                if (event.target === modal) {
+                    modal.classList.remove('visible');
+                }
+            };
+        });
+
+        window.addEventListener('load', function () {
+            // 移除隐藏样式
+            var hideStyle = document.getElementById('initialHideStyle');
+            if (hideStyle) {
+                hideStyle.parentNode.removeChild(hideStyle);
+            }
+            // 显示内容
+            document.body.style.visibility = 'visible';
+        });
+
+        const intro = document.getElementById("intro-image");
+        const real = intro.querySelector(".real");
+        const anime = intro.querySelector(".anime");
+
+        let showTimer; 
+        let hideTimer; 
+
+        intro.addEventListener("mouseenter", () => {
+
+            showTimer = setTimeout(() => {
+                real.style.opacity = 1;
+                anime.style.opacity = 0;
+
+
+                hideTimer = setTimeout(() => {
+                    real.style.opacity = 0;
+                    anime.style.opacity = 1;
+                }, 5000);
+
+            }, 5000);
+        });
+
+        intro.addEventListener("mouseleave", () => {
+            clearTimeout(showTimer); 
+            clearTimeout(hideTimer); 
+            real.style.opacity = 0;
+            anime.style.opacity = 1;
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
